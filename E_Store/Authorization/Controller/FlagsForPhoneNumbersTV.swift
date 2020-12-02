@@ -1,5 +1,5 @@
 //
-//  FlagPhoneNumberTV.swift
+//  FlagsForPhoneNumbersTV.swift
 //  E_Store
 //
 //  Created by Zufar Suleimanov on 02.12.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FlagPhoneNumberTV: UITableViewController {
+class FlagsForPhoneNumbersTV: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

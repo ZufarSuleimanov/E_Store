@@ -4,6 +4,69 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="qYI-Me-c8S">
+            <objects>
+                <viewController storyboardIdentifier="Authorization" id="Ovx-54-cgA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AdG-0M-30w">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WU8-79-QgD">
+                                <rect key="frame" x="101.66666666666667" y="397.66666666666669" width="224.66666666666663" height="140.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome into E-Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7P-vs-Vvb">
+                                        <rect key="frame" x="0.0" y="0.0" width="224.66666666666666" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-9q-Afa">
+                                        <rect key="frame" x="52.333333333333329" y="48.666666666666629" width="119.99999999999999" height="36"/>
+                                        <color key="backgroundColor" red="0.74246746299999999" green="0.19706675409999999" blue="0.1803541481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="B4n-3d-afU"/>
+                                            <constraint firstAttribute="width" constant="120" id="KoR-fB-IaB"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Sign in" image="arrowshape.turn.up.forward" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHI-3Y-W6a">
+                                        <rect key="frame" x="52.333333333333329" y="104.66666666666663" width="119.99999999999999" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="ZuK-Qk-nEM"/>
+                                            <constraint firstAttribute="width" constant="120" id="hDH-nh-DST"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Sign up" image="person.circle" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xtw-Of-XQb"/>
+                        <color key="backgroundColor" red="0.88245987889999999" green="0.88617110249999997" blue="0.89411181210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="WU8-79-QgD" firstAttribute="centerX" secondItem="Xtw-Of-XQb" secondAttribute="centerX" id="1mc-cJ-wkS"/>
+                            <constraint firstItem="WU8-79-QgD" firstAttribute="centerY" secondItem="Xtw-Of-XQb" secondAttribute="centerY" id="4sr-dU-ZCt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Aa-R9-QMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329.43925233644859" y="55.723542116630675"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

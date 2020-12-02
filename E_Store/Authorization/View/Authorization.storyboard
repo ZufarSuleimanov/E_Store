@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="224.66666666666666" height="28.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
+                                        <color key="highlightedColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-9q-Afa">
                                         <rect key="frame" x="52.333333333333329" y="48.666666666666629" width="119.99999999999999" height="36"/>
@@ -64,9 +64,77 @@
             </objects>
             <point key="canvasLocation" x="-329.43925233644859" y="55.723542116630675"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="u2D-ZQ-LkX">
+            <objects>
+                <viewController storyboardIdentifier="AuthorizationSignIn" id="wr3-76-iIt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YY1-BU-oaq">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kt-Y5-5rh">
+                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <items>
+                                    <navigationItem title="Sign in" id="yvG-Rv-yrk">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="Q5e-Kj-5Do">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="psI-Xx-qDj">
+                                <rect key="frame" x="94" y="396" width="240" height="144"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone namber" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oe4-Hm-H4D">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="kaE-c6-alN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WuQ-lu-QQh">
+                                        <rect key="frame" x="0.0" y="54" width="240" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="ios-N5-Aqw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0H-DM-jqw">
+                                        <rect key="frame" x="60" y="108" width="120" height="36"/>
+                                        <color key="backgroundColor" red="0.74246746299999999" green="0.19706675409999999" blue="0.1803541481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="OrK-7i-p5p"/>
+                                            <constraint firstAttribute="height" constant="36" id="vXR-2c-bgi"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Sign in" image="arrowshape.turn.up.forward" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ryn-oT-d5T"/>
+                        <color key="backgroundColor" red="0.88245987889999999" green="0.88617110249999997" blue="0.89411181210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="psI-Xx-qDj" firstAttribute="centerY" secondItem="Ryn-oT-d5T" secondAttribute="centerY" id="DvI-LO-BGa"/>
+                            <constraint firstItem="2kt-Y5-5rh" firstAttribute="trailing" secondItem="Ryn-oT-d5T" secondAttribute="trailing" id="Mqw-f9-GPk"/>
+                            <constraint firstItem="2kt-Y5-5rh" firstAttribute="top" secondItem="Ryn-oT-d5T" secondAttribute="top" id="OSa-T5-ZOg"/>
+                            <constraint firstItem="psI-Xx-qDj" firstAttribute="centerX" secondItem="Ryn-oT-d5T" secondAttribute="centerX" id="XRr-ZU-ls6"/>
+                            <constraint firstItem="2kt-Y5-5rh" firstAttribute="leading" secondItem="Ryn-oT-d5T" secondAttribute="leading" id="n1O-pn-lcf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOM-MH-AWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="56"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

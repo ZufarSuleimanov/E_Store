@@ -1,5 +1,5 @@
 //
-//  AuthorizationSignUp.swift
+//  AuthorizationCV.swift
 //  E_Store
 //
 //  Created by Zufar Suleimanov on 02.12.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthorizationSignUp: UIViewController {
+class AuthorizationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

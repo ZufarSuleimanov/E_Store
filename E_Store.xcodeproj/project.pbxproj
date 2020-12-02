@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		996589B519A04D6D65E3E97F /* Pods_E_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16562E1F2D0F66C4B8820333 /* Pods_E_Store.framework */; };
 		9E817B1A2575696200B677EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E817B192575696200B677EC /* GoogleService-Info.plist */; };
-		9E8E54ED257795E600DD1686 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EC257795E600DD1686 /* Authorization.swift */; };
-		9E8E54F02577960400DD1686 /* AuthorizationSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EF2577960400DD1686 /* AuthorizationSignIn.swift */; };
-		9E8E54F32577961400DD1686 /* AuthorizationSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F22577961400DD1686 /* AuthorizationSignUp.swift */; };
-		9E8E54F62577963C00DD1686 /* FlagPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F52577963C00DD1686 /* FlagPhoneNumber.swift */; };
+		9E8E54ED257795E600DD1686 /* AuthorizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EC257795E600DD1686 /* AuthorizationVC.swift */; };
+		9E8E54F02577960400DD1686 /* AuthorizationSignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EF2577960400DD1686 /* AuthorizationSignInVC.swift */; };
+		9E8E54F32577961400DD1686 /* AuthorizationSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F22577961400DD1686 /* AuthorizationSignUpVC.swift */; };
+		9E8E54F62577963C00DD1686 /* FlagPhoneNumberTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F52577963C00DD1686 /* FlagPhoneNumberTV.swift */; };
 		9EA1CF5325774C220070769D /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1CF5225774C220070769D /* StoryboardNames.swift */; };
 		9EA1CF5725774C6D0070769D /* ViewNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1CF5625774C6D0070769D /* ViewNames.swift */; };
 		9EA1CF5A25774D320070769D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA1CF5925774D320070769D /* Authorization.storyboard */; };
@@ -29,10 +29,10 @@
 		16562E1F2D0F66C4B8820333 /* Pods_E_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47348153DF845CF2EBEAAE36 /* Pods-E_Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E_Store.debug.xcconfig"; path = "Target Support Files/Pods-E_Store/Pods-E_Store.debug.xcconfig"; sourceTree = "<group>"; };
 		9E817B192575696200B677EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9E8E54EC257795E600DD1686 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
-		9E8E54EF2577960400DD1686 /* AuthorizationSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignIn.swift; sourceTree = "<group>"; };
-		9E8E54F22577961400DD1686 /* AuthorizationSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignUp.swift; sourceTree = "<group>"; };
-		9E8E54F52577963C00DD1686 /* FlagPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagPhoneNumber.swift; sourceTree = "<group>"; };
+		9E8E54EC257795E600DD1686 /* AuthorizationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationVC.swift; sourceTree = "<group>"; };
+		9E8E54EF2577960400DD1686 /* AuthorizationSignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignInVC.swift; sourceTree = "<group>"; };
+		9E8E54F22577961400DD1686 /* AuthorizationSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignUpVC.swift; sourceTree = "<group>"; };
+		9E8E54F52577963C00DD1686 /* FlagPhoneNumberTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagPhoneNumberTV.swift; sourceTree = "<group>"; };
 		9EA1CF5225774C220070769D /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		9EA1CF5625774C6D0070769D /* ViewNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNames.swift; sourceTree = "<group>"; };
 		9EA1CF5925774D320070769D /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
@@ -96,10 +96,10 @@
 		9EA1CF50257745EE0070769D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9E8E54EC257795E600DD1686 /* Authorization.swift */,
-				9E8E54EF2577960400DD1686 /* AuthorizationSignIn.swift */,
-				9E8E54F22577961400DD1686 /* AuthorizationSignUp.swift */,
-				9E8E54F52577963C00DD1686 /* FlagPhoneNumber.swift */,
+				9E8E54EC257795E600DD1686 /* AuthorizationVC.swift */,
+				9E8E54EF2577960400DD1686 /* AuthorizationSignInVC.swift */,
+				9E8E54F22577961400DD1686 /* AuthorizationSignUpVC.swift */,
+				9E8E54F52577963C00DD1686 /* FlagPhoneNumberTV.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -274,15 +274,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E8E54F32577961400DD1686 /* AuthorizationSignUp.swift in Sources */,
+				9E8E54F32577961400DD1686 /* AuthorizationSignUpVC.swift in Sources */,
 				9EA1CF5325774C220070769D /* StoryboardNames.swift in Sources */,
 				9ECB02D3257560F4001D3D40 /* ViewController.swift in Sources */,
 				9ECB02D9257560F4001D3D40 /* E_Store.xcdatamodeld in Sources */,
 				9EA1CF5725774C6D0070769D /* ViewNames.swift in Sources */,
-				9E8E54F62577963C00DD1686 /* FlagPhoneNumber.swift in Sources */,
+				9E8E54F62577963C00DD1686 /* FlagPhoneNumberTV.swift in Sources */,
 				9ECB02CF257560F4001D3D40 /* AppDelegate.swift in Sources */,
-				9E8E54F02577960400DD1686 /* AuthorizationSignIn.swift in Sources */,
-				9E8E54ED257795E600DD1686 /* Authorization.swift in Sources */,
+				9E8E54F02577960400DD1686 /* AuthorizationSignInVC.swift in Sources */,
+				9E8E54ED257795E600DD1686 /* AuthorizationVC.swift in Sources */,
 				9ECB02D1257560F4001D3D40 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

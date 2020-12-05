@@ -11,5 +11,5 @@ enum ViewControllers: String {
     case Authorization = "Authorization"
     case AuthorizationSignIn = "AuthorizationSignIn"
     case AuthorizationSignUp = "AuthorizationSignUp"
-    case FlagPhoneNumber = "FlagPhoneNumber"
+    case FlagsForPhoneNumbers = "FlagsForPhoneNumbers"
 }

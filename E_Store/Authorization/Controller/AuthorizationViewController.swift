@@ -1,5 +1,5 @@
 //
-//  AuthorizationCV.swift
+//  AuthorizationViewController.swift
 //  E_Store
 //
 //  Created by Zufar Suleimanov on 02.12.2020.

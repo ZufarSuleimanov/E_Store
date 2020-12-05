@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		996589B519A04D6D65E3E97F /* Pods_E_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16562E1F2D0F66C4B8820333 /* Pods_E_Store.framework */; };
+		9E3B48302577BD78000011A5 /* FlagsForPhoneNumbersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3B482F2577BD78000011A5 /* FlagsForPhoneNumbersModel.swift */; };
+		9E3B48352577BE8E000011A5 /* FlagsForPhoneNumbersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3B48342577BE8E000011A5 /* FlagsForPhoneNumbersTableViewCell.swift */; };
 		9E817B1A2575696200B677EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E817B192575696200B677EC /* GoogleService-Info.plist */; };
-		9E8E54ED257795E600DD1686 /* AuthorizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EC257795E600DD1686 /* AuthorizationVC.swift */; };
-		9E8E54F02577960400DD1686 /* AuthorizationSignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EF2577960400DD1686 /* AuthorizationSignInVC.swift */; };
-		9E8E54F32577961400DD1686 /* AuthorizationSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F22577961400DD1686 /* AuthorizationSignUpVC.swift */; };
-		9E8E54F62577963C00DD1686 /* FlagPhoneNumberTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F52577963C00DD1686 /* FlagPhoneNumberTV.swift */; };
+		9E8E54ED257795E600DD1686 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EC257795E600DD1686 /* AuthorizationViewController.swift */; };
+		9E8E54F02577960400DD1686 /* AuthorizationSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EF2577960400DD1686 /* AuthorizationSignInViewController.swift */; };
+		9E8E54F32577961400DD1686 /* AuthorizationSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F22577961400DD1686 /* AuthorizationSignUpViewController.swift */; };
+		9E8E54F62577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F52577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift */; };
 		9EA1CF5325774C220070769D /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1CF5225774C220070769D /* StoryboardNames.swift */; };
 		9EA1CF5725774C6D0070769D /* ViewNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1CF5625774C6D0070769D /* ViewNames.swift */; };
 		9EA1CF5A25774D320070769D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA1CF5925774D320070769D /* Authorization.storyboard */; };
 		9ECB02CF257560F4001D3D40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB02CE257560F4001D3D40 /* AppDelegate.swift */; };
 		9ECB02D1257560F4001D3D40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB02D0257560F4001D3D40 /* SceneDelegate.swift */; };
 		9ECB02D3257560F4001D3D40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB02D2257560F4001D3D40 /* ViewController.swift */; };
-		9ECB02D6257560F4001D3D40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECB02D4257560F4001D3D40 /* Main.storyboard */; };
 		9ECB02D9257560F4001D3D40 /* E_Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB02D7257560F4001D3D40 /* E_Store.xcdatamodeld */; };
 		9ECB02DB257560F5001D3D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECB02DA257560F5001D3D40 /* Assets.xcassets */; };
 		9ECB02DE257560F5001D3D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECB02DC257560F5001D3D40 /* LaunchScreen.storyboard */; };
@@ -28,11 +29,13 @@
 /* Begin PBXFileReference section */
 		16562E1F2D0F66C4B8820333 /* Pods_E_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47348153DF845CF2EBEAAE36 /* Pods-E_Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E_Store.debug.xcconfig"; path = "Target Support Files/Pods-E_Store/Pods-E_Store.debug.xcconfig"; sourceTree = "<group>"; };
+		9E3B482F2577BD78000011A5 /* FlagsForPhoneNumbersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsForPhoneNumbersModel.swift; sourceTree = "<group>"; };
+		9E3B48342577BE8E000011A5 /* FlagsForPhoneNumbersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsForPhoneNumbersTableViewCell.swift; sourceTree = "<group>"; };
 		9E817B192575696200B677EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9E8E54EC257795E600DD1686 /* AuthorizationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationVC.swift; sourceTree = "<group>"; };
-		9E8E54EF2577960400DD1686 /* AuthorizationSignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignInVC.swift; sourceTree = "<group>"; };
-		9E8E54F22577961400DD1686 /* AuthorizationSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignUpVC.swift; sourceTree = "<group>"; };
-		9E8E54F52577963C00DD1686 /* FlagPhoneNumberTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagPhoneNumberTV.swift; sourceTree = "<group>"; };
+		9E8E54EC257795E600DD1686 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		9E8E54EF2577960400DD1686 /* AuthorizationSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignInViewController.swift; sourceTree = "<group>"; };
+		9E8E54F22577961400DD1686 /* AuthorizationSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignUpViewController.swift; sourceTree = "<group>"; };
+		9E8E54F52577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsForPhoneNumbersTableViewController.swift; sourceTree = "<group>"; };
 		9EA1CF5225774C220070769D /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		9EA1CF5625774C6D0070769D /* ViewNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNames.swift; sourceTree = "<group>"; };
 		9EA1CF5925774D320070769D /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
@@ -40,7 +43,6 @@
 		9ECB02CE257560F4001D3D40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ECB02D0257560F4001D3D40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9ECB02D2257560F4001D3D40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9ECB02D5257560F4001D3D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9ECB02D8257560F4001D3D40 /* E_Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = E_Store.xcdatamodel; sourceTree = "<group>"; };
 		9ECB02DA257560F5001D3D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9ECB02DD257560F5001D3D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		9EA1CF4E257745C90070769D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9E3B482F2577BD78000011A5 /* FlagsForPhoneNumbersModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,10 +99,11 @@
 		9EA1CF50257745EE0070769D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9E8E54EC257795E600DD1686 /* AuthorizationVC.swift */,
-				9E8E54EF2577960400DD1686 /* AuthorizationSignInVC.swift */,
-				9E8E54F22577961400DD1686 /* AuthorizationSignUpVC.swift */,
-				9E8E54F52577963C00DD1686 /* FlagPhoneNumberTV.swift */,
+				9E8E54EC257795E600DD1686 /* AuthorizationViewController.swift */,
+				9E8E54EF2577960400DD1686 /* AuthorizationSignInViewController.swift */,
+				9E8E54F22577961400DD1686 /* AuthorizationSignUpViewController.swift */,
+				9E8E54F52577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift */,
+				9E3B48342577BE8E000011A5 /* FlagsForPhoneNumbersTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,7 +143,6 @@
 				9ECB02CE257560F4001D3D40 /* AppDelegate.swift */,
 				9ECB02D0257560F4001D3D40 /* SceneDelegate.swift */,
 				9ECB02D2257560F4001D3D40 /* ViewController.swift */,
-				9ECB02D4257560F4001D3D40 /* Main.storyboard */,
 				9ECB02DA257560F5001D3D40 /* Assets.xcassets */,
 				9ECB02DC257560F5001D3D40 /* LaunchScreen.storyboard */,
 				9ECB02DF257560F5001D3D40 /* Info.plist */,
@@ -221,7 +224,6 @@
 				9EA1CF5A25774D320070769D /* Authorization.storyboard in Resources */,
 				9E817B1A2575696200B677EC /* GoogleService-Info.plist in Resources */,
 				9ECB02DB257560F5001D3D40 /* Assets.xcassets in Resources */,
-				9ECB02D6257560F4001D3D40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,15 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E8E54F32577961400DD1686 /* AuthorizationSignUpVC.swift in Sources */,
+				9E8E54F32577961400DD1686 /* AuthorizationSignUpViewController.swift in Sources */,
 				9EA1CF5325774C220070769D /* StoryboardNames.swift in Sources */,
 				9ECB02D3257560F4001D3D40 /* ViewController.swift in Sources */,
 				9ECB02D9257560F4001D3D40 /* E_Store.xcdatamodeld in Sources */,
 				9EA1CF5725774C6D0070769D /* ViewNames.swift in Sources */,
-				9E8E54F62577963C00DD1686 /* FlagPhoneNumberTV.swift in Sources */,
+				9E8E54F62577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift in Sources */,
 				9ECB02CF257560F4001D3D40 /* AppDelegate.swift in Sources */,
-				9E8E54F02577960400DD1686 /* AuthorizationSignInVC.swift in Sources */,
-				9E8E54ED257795E600DD1686 /* AuthorizationVC.swift in Sources */,
+				9E3B48352577BE8E000011A5 /* FlagsForPhoneNumbersTableViewCell.swift in Sources */,
+				9E3B48302577BD78000011A5 /* FlagsForPhoneNumbersModel.swift in Sources */,
+				9E8E54F02577960400DD1686 /* AuthorizationSignInViewController.swift in Sources */,
+				9E8E54ED257795E600DD1686 /* AuthorizationViewController.swift in Sources */,
 				9ECB02D1257560F4001D3D40 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,14 +294,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9ECB02D4257560F4001D3D40 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9ECB02D5257560F4001D3D40 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9ECB02DC257560F5001D3D40 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

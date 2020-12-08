@@ -43,45 +43,11 @@ class AuthorizationSignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func getSMScodeB(_ sender: UIButton) {}
+    @IBAction func getSMScodeB(_ sender: UIButton) {
+        let phoneNumberString = "\(flagsForPhoneNumbersTF.text!)\(subscriberPhoneNumberTF.text!)"
+        let phoneNumber = phoneNumberString.dropFirst(2)
+    }
     @IBAction func getStartedB(_ sender: UIButton) {}
 }
 
-extension AuthorizationSignUpViewController: UIPopoverPresentationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
-    
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString text: String) -> Bool{
-        let currentCharacterCount = textField.text?.count ?? 0
-        let staticRange = 10
-        return setupConfig(currentCharacterCount:currentCharacterCount, range: range, text: text, staticRange:staticRange)
-    }
-    
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        let currentCharacterCount = textView.text?.count ?? 0
-        let staticRange = 6
-        return setupConfig(currentCharacterCount:currentCharacterCount, range: range, text: text, staticRange:staticRange)
-    }
-    
-    func setupConfig(currentCharacterCount: Int, range: NSRange, text: String, staticRange:Int) -> Bool {
-        if range.length + range.location > currentCharacterCount {
-            return false
-        }
-        let newLength = currentCharacterCount + text.count - range.length
-        return newLength <= staticRange
-    }
-    
-    func textViewDidChange(_ textView: UITextView) {
-        if textView.text?.count == 6 {
-            statusL.text = "Норм"
-        } else {
-            statusL.text = "Не норм"
-        }
-    }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-}

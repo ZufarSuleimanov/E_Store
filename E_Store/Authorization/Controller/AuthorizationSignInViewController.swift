@@ -39,22 +39,3 @@ class AuthorizationSignInViewController: UIViewController {
     @IBAction func signInB(_ sender: UIButton) {}
     
 }
-
-extension AuthorizationSignInViewController: UIPopoverPresentationControllerDelegate, UITextFieldDelegate {
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
-
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString text: String) -> Bool {
-        let currentCharacterCount = textField.text?.count ?? 0
-        if range.length + range.location > currentCharacterCount {
-            return false
-        }
-        let newLength = currentCharacterCount + text.count - range.length
-        return newLength <= 10
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-}

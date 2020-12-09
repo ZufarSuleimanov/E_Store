@@ -9,14 +9,14 @@ import UIKit
 
 class FlagsForPhoneNumbersTableViewController: UITableViewController {
     
-    var completion: ((String) -> ())?
+    var getBackPhoneCodeAndFlag: ((String) -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        completion?("\(objects[indexPath.row].countryFlag) \(objects[indexPath.row].countryCode)")
+        getBackPhoneCodeAndFlag?("\(objects[indexPath.row].countryFlag) \(objects[indexPath.row].countryCode)")
         dismiss(animated: true)
     }
     

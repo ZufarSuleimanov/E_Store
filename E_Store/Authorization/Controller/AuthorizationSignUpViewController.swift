@@ -34,10 +34,10 @@ class AuthorizationSignUpViewController: UIViewController {
         let popOverFlagsForPhoneNumbersVC = popFlagsForPhoneNumbersVC.popoverPresentationController
         popOverFlagsForPhoneNumbersVC?.delegate = self
         popOverFlagsForPhoneNumbersVC?.sourceView = self.flagsForPhoneNumbersTF
-        popOverFlagsForPhoneNumbersVC?.sourceRect = CGRect(x: self.flagsForPhoneNumbersTF.bounds.midX, y: self.flagsForPhoneNumbersTF.bounds.maxY, width: 0, height: 0)
+        popOverFlagsForPhoneNumbersVC?.sourceRect = CGRect(x: self.flagsForPhoneNumbersTF.bounds.midX, y: self.flagsForPhoneNumbersTF.bounds.midY, width: 0, height: 0)
         popFlagsForPhoneNumbersVC.preferredContentSize = CGSize(width: 240, height: 200)
         self.present(popFlagsForPhoneNumbersVC, animated: true)
-        popFlagsForPhoneNumbersVC.completion = { [weak self] text in
+        popFlagsForPhoneNumbersVC.getBackPhoneCodeAndFlag = { [weak self] text in
             guard let self = self else { return }
             self.flagsForPhoneNumbersTF.text = text
         }

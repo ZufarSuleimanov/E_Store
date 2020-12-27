@@ -6,24 +6,27 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class TestAuthViewViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBAction func exitBBI(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            resetUserDefaults()
+            performSegue(withIdentifier: "closeSegue", sender: self)
+        } catch { }
     }
     
+    func resetUserDefaults(){
 
-    /*
-    // MARK: - Navigation
+        let userDefaults = UserDefaults()
+        let dict = userDefaults.dictionaryRepresentation() as NSDictionary
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        for key in dict.allKeys {
+            userDefaults.removeObject(forKey: key as! String)
+        }
+
+        userDefaults.synchronize()
     }
-    */
-
 }

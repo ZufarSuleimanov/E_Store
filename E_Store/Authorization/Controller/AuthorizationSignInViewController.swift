@@ -8,34 +8,53 @@
 import UIKit
 
 class AuthorizationSignInViewController: UIViewController {
-
-    @IBOutlet weak var flagsForPhoneNumbersTF: UITextField!
-    @IBOutlet weak var subscriberPhoneNumberTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var showFlagsForPhoneNumbersB: UIButton!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var processActivityIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        subscriberPhoneNumberTF.delegate = self
+        processActivityIndicatorView.isHidden = true
     }
     
-    @IBAction func backBBI(_ sender: UIBarButtonItem) { dismiss(animated: true) }
+    @IBAction func back(_ sender: UIBarButtonItem) { dismiss(animated: true) }
     
-    @IBAction func showFlagsForPhoneNumbersB(_ sender: UIButton) {
-        guard let popFlagsForPhoneNumbersVC = storyboard?.instantiateViewController(identifier: ViewControllers.FlagsForPhoneNumbers.rawValue) as? FlagsForPhoneNumbersTableViewController else { return }
-        popFlagsForPhoneNumbersVC.modalPresentationStyle = .popover
-        let popOverFlagsForPhoneNumbersVC = popFlagsForPhoneNumbersVC.popoverPresentationController
-        popOverFlagsForPhoneNumbersVC?.delegate = self
-        popOverFlagsForPhoneNumbersVC?.sourceView = self.flagsForPhoneNumbersTF
-        popOverFlagsForPhoneNumbersVC?.sourceRect = CGRect(x: self.flagsForPhoneNumbersTF.bounds.midX, y: self.flagsForPhoneNumbersTF.bounds.maxY, width: 0, height: 0)
-        popFlagsForPhoneNumbersVC.preferredContentSize = CGSize(width: 240, height: 200)
-        self.present(popFlagsForPhoneNumbersVC, animated: true)
-        popFlagsForPhoneNumbersVC.getBackPhoneCodeAndFlag = { [weak self] text in
-            guard let self = self else { return }
-            self.flagsForPhoneNumbersTF.text = text
+    @IBAction func signIn(_ sender: UIButton) {
+        AuthHandler.loginUsingEmail(email: emailTextField.text!, password: passwordTextField.text!)
+        performAnimation()
+    }
+    
+    @IBAction func signInForPhoneNumber(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: Storyboards.Authorization.rawValue, bundle: nil)
+        let AuthorizationSignInForPhoneNumber = storyboard.instantiateViewController(withIdentifier: ViewControllers.AuthorizationSignInForPhoneNumber.rawValue)
+        AuthorizationSignInForPhoneNumber.modalPresentationStyle = .fullScreen
+        present(AuthorizationSignInForPhoneNumber, animated: true)
+    }
+    
+    private func triggerNotification(){
+        let alertController = UIAlertController(title: "Error", message: "You have not completed all the fields.", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancel)
+        present(alertController, animated: true)
+    }
+    
+    private func performAnimation(){
+        processActivityIndicatorView.startAnimating()
+        processActivityIndicatorView.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            self.processActivityIndicatorView.stopAnimating()
+            self.processActivityIndicatorView.isHidden = true
+            let authEmail = UserDefaults.standard.string(forKey: "authEmail")
+            if authEmail != nil {
+                let storyboard = UIStoryboard(name: Storyboards.Authorization.rawValue, bundle: nil)
+                let testAuthView = storyboard.instantiateViewController(withIdentifier: ViewControllers.TestAuthView.rawValue)
+                testAuthView.modalPresentationStyle = .fullScreen
+                self.present(testAuthView, animated: true)
+            } else {
+                self.triggerNotification()
+            }
         }
     }
-    
-    @IBAction func signInB(_ sender: UIButton) {}
     
 }

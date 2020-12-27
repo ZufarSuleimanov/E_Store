@@ -10,6 +10,8 @@ import Foundation
 enum ViewControllers: String {
     case Authorization = "Authorization"
     case AuthorizationSignIn = "AuthorizationSignIn"
+    case AuthorizationSignInForPhoneNumber = "AuthorizationSignInPhoneNumber"
     case AuthorizationSignUp = "AuthorizationSignUp"
     case FlagsForPhoneNumbers = "FlagsForPhoneNumbers"
+    case TestAuthView = "TestAuthView"
 }

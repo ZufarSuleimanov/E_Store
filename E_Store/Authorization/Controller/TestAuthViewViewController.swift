@@ -1,5 +1,5 @@
 //
-//  AuthorizationSignUpViewController.swift
+//  TestAuthViewViewController.swift
 //  E_Store
 //
 //  Created by Zufar Suleimanov on 27.12.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthorizationSignUpViewController: UIViewController {
+class TestAuthViewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

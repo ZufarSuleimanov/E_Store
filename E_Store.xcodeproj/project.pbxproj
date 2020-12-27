@@ -15,17 +15,18 @@
 		9E817B1A2575696200B677EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E817B192575696200B677EC /* GoogleService-Info.plist */; };
 		9E8E54ED257795E600DD1686 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EC257795E600DD1686 /* AuthorizationViewController.swift */; };
 		9E8E54F02577960400DD1686 /* AuthorizationSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54EF2577960400DD1686 /* AuthorizationSignInViewController.swift */; };
-		9E8E54F32577961400DD1686 /* AuthorizationSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F22577961400DD1686 /* AuthorizationSignUpViewController.swift */; };
+		9E8E54F32577961400DD1686 /* AuthorizationSignInForPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F22577961400DD1686 /* AuthorizationSignInForPhoneNumberViewController.swift */; };
 		9E8E54F62577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E54F52577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift */; };
 		9EA1CF5325774C220070769D /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1CF5225774C220070769D /* StoryboardNames.swift */; };
 		9EA1CF5725774C6D0070769D /* ViewNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1CF5625774C6D0070769D /* ViewNames.swift */; };
 		9EA1CF5A25774D320070769D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA1CF5925774D320070769D /* Authorization.storyboard */; };
+		9EAD7DBE2598AC82002DCFF6 /* AuthorizationSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD7DBD2598AC82002DCFF6 /* AuthorizationSignUpViewController.swift */; };
 		9ECB02CF257560F4001D3D40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB02CE257560F4001D3D40 /* AppDelegate.swift */; };
 		9ECB02D1257560F4001D3D40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB02D0257560F4001D3D40 /* SceneDelegate.swift */; };
-		9ECB02D3257560F4001D3D40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB02D2257560F4001D3D40 /* ViewController.swift */; };
 		9ECB02D9257560F4001D3D40 /* E_Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB02D7257560F4001D3D40 /* E_Store.xcdatamodeld */; };
 		9ECB02DB257560F5001D3D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECB02DA257560F5001D3D40 /* Assets.xcassets */; };
 		9ECB02DE257560F5001D3D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECB02DC257560F5001D3D40 /* LaunchScreen.storyboard */; };
+		9EE3D08A2597CCC800E5FF20 /* TestAuthViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3D0892597CCC800E5FF20 /* TestAuthViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,19 +39,20 @@
 		9E817B192575696200B677EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E8E54EC257795E600DD1686 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		9E8E54EF2577960400DD1686 /* AuthorizationSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignInViewController.swift; sourceTree = "<group>"; };
-		9E8E54F22577961400DD1686 /* AuthorizationSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignUpViewController.swift; sourceTree = "<group>"; };
+		9E8E54F22577961400DD1686 /* AuthorizationSignInForPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignInForPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		9E8E54F52577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsForPhoneNumbersTableViewController.swift; sourceTree = "<group>"; };
 		9EA1CF5225774C220070769D /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		9EA1CF5625774C6D0070769D /* ViewNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNames.swift; sourceTree = "<group>"; };
 		9EA1CF5925774D320070769D /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		9EAD7DBD2598AC82002DCFF6 /* AuthorizationSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSignUpViewController.swift; sourceTree = "<group>"; };
 		9ECB02CB257560F4001D3D40 /* E_Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = E_Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECB02CE257560F4001D3D40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ECB02D0257560F4001D3D40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9ECB02D2257560F4001D3D40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9ECB02D8257560F4001D3D40 /* E_Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = E_Store.xcdatamodel; sourceTree = "<group>"; };
 		9ECB02DA257560F5001D3D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9ECB02DD257560F5001D3D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ECB02DF257560F5001D3D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EE3D0892597CCC800E5FF20 /* TestAuthViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAuthViewViewController.swift; sourceTree = "<group>"; };
 		A82FB91ED70713D82E726EAC /* Pods-E_Store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E_Store.release.xcconfig"; path = "Target Support Files/Pods-E_Store/Pods-E_Store.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,25 @@
 				16562E1F2D0F66C4B8820333 /* Pods_E_Store.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E8709AA2598EB170020858F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9EA1CF5225774C220070769D /* StoryboardNames.swift */,
+				9EA1CF5625774C6D0070769D /* ViewNames.swift */,
+				9ECB02CE257560F4001D3D40 /* AppDelegate.swift */,
+				9ECB02D0257560F4001D3D40 /* SceneDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E8709AB2598EB3C0020858F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9ECB02DC257560F5001D3D40 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9EA1CF4D257744490070769D /* Authorization */ = {
@@ -107,9 +128,11 @@
 			children = (
 				9E8E54EC257795E600DD1686 /* AuthorizationViewController.swift */,
 				9E8E54EF2577960400DD1686 /* AuthorizationSignInViewController.swift */,
-				9E8E54F22577961400DD1686 /* AuthorizationSignUpViewController.swift */,
+				9E8E54F22577961400DD1686 /* AuthorizationSignInForPhoneNumberViewController.swift */,
+				9EAD7DBD2598AC82002DCFF6 /* AuthorizationSignUpViewController.swift */,
 				9E8E54F52577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift */,
 				9E3B48342577BE8E000011A5 /* FlagsForPhoneNumbersTableViewCell.swift */,
+				9EE3D0892597CCC800E5FF20 /* TestAuthViewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,8 +140,12 @@
 		9EA1CF512577466A0070769D /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				9EA1CF5225774C220070769D /* StoryboardNames.swift */,
-				9EA1CF5625774C6D0070769D /* ViewNames.swift */,
+				9ECB02DF257560F5001D3D40 /* Info.plist */,
+				9ECB02D7257560F4001D3D40 /* E_Store.xcdatamodeld */,
+				9E817B192575696200B677EC /* GoogleService-Info.plist */,
+				9ECB02DA257560F5001D3D40 /* Assets.xcassets */,
+				9E8709AB2598EB3C0020858F /* View */,
+				9E8709AA2598EB170020858F /* Model */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -146,14 +173,6 @@
 			children = (
 				9EA1CF512577466A0070769D /* Supporting files */,
 				9EA1CF4D257744490070769D /* Authorization */,
-				9ECB02CE257560F4001D3D40 /* AppDelegate.swift */,
-				9ECB02D0257560F4001D3D40 /* SceneDelegate.swift */,
-				9ECB02D2257560F4001D3D40 /* ViewController.swift */,
-				9ECB02DA257560F5001D3D40 /* Assets.xcassets */,
-				9ECB02DC257560F5001D3D40 /* LaunchScreen.storyboard */,
-				9ECB02DF257560F5001D3D40 /* Info.plist */,
-				9ECB02D7257560F4001D3D40 /* E_Store.xcdatamodeld */,
-				9E817B192575696200B677EC /* GoogleService-Info.plist */,
 			);
 			path = E_Store;
 			sourceTree = "<group>";
@@ -282,13 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E8E54F32577961400DD1686 /* AuthorizationSignUpViewController.swift in Sources */,
+				9E8E54F32577961400DD1686 /* AuthorizationSignInForPhoneNumberViewController.swift in Sources */,
 				9EA1CF5325774C220070769D /* StoryboardNames.swift in Sources */,
-				9ECB02D3257560F4001D3D40 /* ViewController.swift in Sources */,
 				9ECB02D9257560F4001D3D40 /* E_Store.xcdatamodeld in Sources */,
 				9EA1CF5725774C6D0070769D /* ViewNames.swift in Sources */,
+				9EE3D08A2597CCC800E5FF20 /* TestAuthViewViewController.swift in Sources */,
 				9E0064A4257F9FB70074DF6B /* AuthorizationExtensions.swift in Sources */,
 				9E8E54F62577963C00DD1686 /* FlagsForPhoneNumbersTableViewController.swift in Sources */,
+				9EAD7DBE2598AC82002DCFF6 /* AuthorizationSignUpViewController.swift in Sources */,
 				9ECB02CF257560F4001D3D40 /* AppDelegate.swift in Sources */,
 				9E3B48352577BE8E000011A5 /* FlagsForPhoneNumbersTableViewCell.swift in Sources */,
 				9E3B48302577BD78000011A5 /* FlagsForPhoneNumbersModel.swift in Sources */,
@@ -437,7 +457,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27A2YGXJSL;
-				INFOPLIST_FILE = E_Store/Info.plist;
+				INFOPLIST_FILE = "E_Store/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +478,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27A2YGXJSL;
-				INFOPLIST_FILE = E_Store/Info.plist;
+				INFOPLIST_FILE = "E_Store/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -9,71 +9,88 @@ import UIKit
 
 class AuthorizationSignInForPhoneNumberViewController: UIViewController {
     
-    @IBOutlet weak var flagsForPhoneNumbersTF: UITextField!
-    @IBOutlet weak var subscriberPhoneNumberTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var codeSMSTV: UITextView!
-    @IBOutlet weak var statusL: UILabel!
-    @IBOutlet weak var showFlagsForPhoneNumbersB: UIButton!
-    @IBOutlet weak var getSMSCodeB: UIButton!
-    @IBOutlet weak var getStartedB: UIButton!
+    var verificationID: String?
+    
+    @IBOutlet weak var flagsForPhoneNumbersTextField: UITextField!
+    @IBOutlet weak var subscriberPhoneNumberTextField: UITextField!
+    @IBOutlet weak var codeSMSTextView: UITextView!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var showFlagsForPhoneNumbersButton: UIButton!
+    @IBOutlet weak var getSMSCodeButton: UIButton!
+    @IBOutlet weak var getStartedButton: UIButton!
+    @IBOutlet weak var processActivityIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupConfig()
     }
     
-    @IBAction func backBBI(_ sender: UIBarButtonItem) { dismiss(animated: true) }
+    @IBAction func back(_ sender: UIBarButtonItem) { dismiss(animated: true) }
     
-    @IBAction func showFlagsForPhoneNumbersB(_ sender: UIButton) {
+    @IBAction func showFlagsForPhoneNumbers(_ sender: UIButton) {
         guard let popFlagsForPhoneNumbersVC = storyboard?.instantiateViewController(identifier: ViewControllers.FlagsForPhoneNumbers.rawValue) as? FlagsForPhoneNumbersTableViewController else { return }
         popFlagsForPhoneNumbersVC.modalPresentationStyle = .popover
         let popOverFlagsForPhoneNumbersVC = popFlagsForPhoneNumbersVC.popoverPresentationController
         popOverFlagsForPhoneNumbersVC?.delegate = self
-        popOverFlagsForPhoneNumbersVC?.sourceView = self.flagsForPhoneNumbersTF
-        popOverFlagsForPhoneNumbersVC?.sourceRect = CGRect(x: self.flagsForPhoneNumbersTF.bounds.midX, y: self.flagsForPhoneNumbersTF.bounds.midY, width: 0, height: 0)
+        popOverFlagsForPhoneNumbersVC?.sourceView = self.flagsForPhoneNumbersTextField
+        popOverFlagsForPhoneNumbersVC?.sourceRect = CGRect(x: self.flagsForPhoneNumbersTextField.bounds.midX, y: self.flagsForPhoneNumbersTextField.bounds.midY, width: 0, height: 0)
         popFlagsForPhoneNumbersVC.preferredContentSize = CGSize(width: 240, height: 200)
         self.present(popFlagsForPhoneNumbersVC, animated: true)
         popFlagsForPhoneNumbersVC.getBackPhoneCodeAndFlag = { [weak self] text in
             guard let self = self else { return }
-            self.flagsForPhoneNumbersTF.text = text
+            self.flagsForPhoneNumbersTextField.text = text
         }
     }
     
-    @IBAction func getSMSCodeB(_ sender: UIButton) {
-        let phoneNumber = "\(flagsForPhoneNumbersTF.text!)\(subscriberPhoneNumberTF.text!)".dropFirst(2)
+    @IBAction func getSMSCode(_ sender: UIButton) {
+        let phoneNumber = "\(flagsForPhoneNumbersTextField.text!)\(subscriberPhoneNumberTextField.text!)".dropFirst(2)
         AuthHandler.getPhoneNumber(phoneNumber: String(phoneNumber))
-        getStartedB.alpha = 1
-        getStartedB.isEnabled = true
+        getStartedButton.alpha = 1
+        getStartedButton.isEnabled = true
         
     }
-    @IBAction func getStartedB(_ sender: UIButton) {
-        let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
-        AuthHandler.checkEnteredCode(code: codeSMSTV.text, verificationID: verificationID!)
-        if verificationID != nil {
-            let storyboard = UIStoryboard(name: Storyboards.Authorization.rawValue, bundle: nil)
-            let testAuthView = storyboard.instantiateViewController(withIdentifier: ViewControllers.TestAuthView.rawValue)
-            testAuthView.modalPresentationStyle = .fullScreen
-            present(testAuthView, animated: true)
-        } else {
-            let alertController = UIAlertController(title: "Error", message: "You entered an invalid SMS code", preferredStyle: .alert)
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-            alertController.addAction(cancel)
-            present(alertController, animated: true)
-        }
+    
+    @IBAction func getStarted(_ sender: UIButton) {
+        verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
+        AuthHandler.checkEnteredCode(code: codeSMSTextView.text, verificationID: verificationID!)
+        performAnimation()
     }
     
     private func setupConfig(){
-        getSMSCodeB.alpha = 0.5
-        getSMSCodeB.isEnabled = false
-        getStartedB.alpha = 0.5
-        getStartedB.isEnabled = false
+        getSMSCodeButton.alpha = 0.5
+        getSMSCodeButton.isEnabled = false
+        getStartedButton.alpha = 0.5
+        getStartedButton.isEnabled = false
         
-        codeSMSTV.delegate = self
-        subscriberPhoneNumberTF.delegate = self
-        passwordTF.delegate = self
+        codeSMSTextView.delegate = self
+        subscriberPhoneNumberTextField.delegate = self
+        processActivityIndicatorView.isHidden = true
     }
+    
+    private func triggerNotification(){
+        let alertController = UIAlertController(title: "Error", message: "You entered an invalid SMS code.", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancel)
+        present(alertController, animated: true)
+    }
+    
+    private func performAnimation(){
+        processActivityIndicatorView.startAnimating()
+        processActivityIndicatorView.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            self.processActivityIndicatorView.stopAnimating()
+            self.processActivityIndicatorView.isHidden = true
+            if self.verificationID != nil {
+                let storyboard = UIStoryboard(name: Storyboards.Authorization.rawValue, bundle: nil)
+                let testAuthView = storyboard.instantiateViewController(withIdentifier: ViewControllers.TestAuthView.rawValue)
+                testAuthView.modalPresentationStyle = .fullScreen
+                self.present(testAuthView, animated: true)
+            } else {
+                self.triggerNotification()
+            }
+        }
+    }
+    
 }
 
 

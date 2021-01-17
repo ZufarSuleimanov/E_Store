@@ -7,11 +7,10 @@
 
 import UIKit
 
-extension AuthorizationSignInViewController: UIPopoverPresentationControllerDelegate, UITextFieldDelegate {
+var lengthСheckPhoneNumber = false
+
+extension AuthorizationSignInViewController: UITextFieldDelegate {
     
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString text: String) -> Bool {
         let currentCharacterCount = textField.text?.count ?? 0
@@ -27,7 +26,7 @@ extension AuthorizationSignInViewController: UIPopoverPresentationControllerDele
     }
 }
 
-extension AuthorizationSignUpViewController: UIPopoverPresentationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
+extension AuthorizationSignInForPhoneNumberViewController: UIPopoverPresentationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
@@ -52,12 +51,35 @@ extension AuthorizationSignUpViewController: UIPopoverPresentationControllerDele
         let newLength = currentCharacterCount + text.count - range.length
         return newLength <= staticRange
     }
+
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+
+        if textField == self.subscriberPhoneNumberTextField {
+            if textField.text?.count ?? 0 >= 10
+            { lengthСheckPhoneNumber = true}
+            else
+            { lengthСheckPhoneNumber = false }
+        }
+
+        if lengthСheckPhoneNumber {
+            getSMSCodeButton.alpha = 1
+            getSMSCodeButton.isEnabled = true
+        } else {
+            getSMSCodeButton.alpha = 0.5
+            getSMSCodeButton.isEnabled = false
+        }
+    }
     
     func textViewDidChange(_ textView: UITextView) {
         if textView.text?.count == 6 {
-            statusL.text = "Норм"
+            
+            getStartedButton.alpha = 1
+            getStartedButton.isEnabled = true
+            statusLabel.text = "Code length is correct"
         } else {
-            statusL.text = "Не норм"
+            statusLabel.text = "The code is not fully entered"
+            getStartedButton.alpha = 0.5
+            getStartedButton.isEnabled = false
         }
     }
 
